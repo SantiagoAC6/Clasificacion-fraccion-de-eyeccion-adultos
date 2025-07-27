@@ -109,7 +109,7 @@ def preprocess_video_for_prediction(video_path, num_frames=NUM_FRAMES, img_size=
     # Forma esperada: (1, NUM_FRAMES, IMG_SIZE[0], IMG_SIZE[1], 1)
     return np.array(frames, dtype=np.float32).reshape(1, num_frames, img_size[0], img_size[1], 1)
 
-# --- 4. Interfaz de Usuario de Streamlit ---
+# --- Interfaz de Usuario de Streamlit ---
 st.set_page_config(
     page_title="Predicción de Fracción de Eyección",
     page_icon="❤️",
@@ -176,5 +176,5 @@ if uploaded_file is not None:
         my_bar.empty() # Asegurarse de que la barra de progreso desaparezca
 
 st.markdown("---")
-st.markdown("Creado con ❤️ y IA para la evaluación de ecocardiogramas.")
+st.markdown("Creado con Ecocardiogramas y IA para la evaluación de ecocardiogramas,requiere evaluacion por especialista si presenta FE anormal.")
 
